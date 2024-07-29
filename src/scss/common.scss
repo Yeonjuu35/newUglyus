@@ -1,0 +1,175 @@
+// color(웹, 모바일 모두 공통)
+$uglyred : #FF2F2F;
+$uglyorange : #FE663F;
+$uglybrown : #CD8F50;
+$uglygreen : #5EAB42;
+$uglyblack : #000000;
+$uglygray : #333333;
+$uglylightgray : #CECECE;
+
+ul, li, dl, dt, dd, a, p{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+// border-radius 공통 스타일 (버튼,이미지)
+.border-radius{
+    border-radius: 20px;
+}
+
+// 컨테이너 - width(1824px)
+.container.customWidth {
+    max-width: 1824px !important;
+    margin: 0 auto !important;
+}
+
+// 폰트
+// 전체 폰트 적용(한글)
+body {
+    font-family: 'Pretendard';
+    letter-spacing: -0.5px;
+}
+
+// 폰트 두께
+.fontThin {
+    font-weight: 100;
+}
+.fontLight {
+    font-weight: 300;
+}
+.fontRegular {
+    font-weight: 400;
+}
+.fontMedium {
+    font-weight: 500;
+}
+.fontSemibold {
+    font-weight: 600;
+}
+.fontBold {
+    font-weight: 700;
+}
+
+.fontNavi{
+    font-size: 20px;
+    color: $uglyblack;
+    @media (max-width : 990px){
+        font-size: 12px;
+    }
+}
+.fontNaviSub{
+    font-size: 17px;
+    color: $uglygray;
+    @media (max-width : 990px){
+        font-size: 12px;
+    }
+}
+.fontUtil{
+    font-size: 14px;
+    color: $uglyblack;
+    @media (max-width : 990px){
+        font-size: 12px;
+    }
+}
+.fontTitle{
+    font-size: 38px;
+    color: $uglyorange;
+    line-height: 2.5rem;
+    @media (max-width : 990px){
+        font-size: 28px;
+        line-height: 1.7rem;
+    }
+}
+.fontSubtitle{
+    font-size: 22px;
+    color:$uglygray;
+    line-height: 1.8rem;
+    @media (max-width : 990px){
+        font-size: 18px;
+        line-height: 1.6rem;
+    }
+}
+.fontLeadcopy{
+    font-size: 18px;
+    color:$uglygray;
+    line-height: 1.8rem;
+    @media (max-width : 990px){
+        font-size: 16px;
+        line-height: 1.4rem;
+    }
+}
+.font_text{
+    font-size: 16px;
+    color:$uglygray;
+    line-height: 1.5rem;
+    @media (max-width : 990px){
+        font-size: 14px;
+    }
+}
+.font_f18bold{
+    font-family: 'Pretendard';
+    font-size: 18px;
+    color: $uglygray;
+}
+.font_f14semibold{
+    font-family: 'Pretendard';
+    font-size: 14px;
+    color: $uglygray;
+}
+.font_f13regular_k{
+    font-family: 'Pretendard';
+    font-size: 13px;
+    color: $uglygray;
+}
+.font_f13regular_e{
+    font-family: 'Rubik';
+    font-size: 13px;
+    color: $uglygray;
+}
+.font_f13bold{
+    font-family: 'Pretendard';
+    font-size: 13px;
+    color: $uglygray;
+}
+ 
+// 그리드가이드(반응형 구현 완료)
+.section_blank{
+    margin-bottom: 220px;
+}
+.title_blank{
+    margin-bottom: 40px;
+}
+.text_blank{
+    margin-bottom: 23px;
+}
+.contents_L_blank{
+    margin-left: 20px;
+}
+.contents_R_blank{
+    margin-right: 20px;
+}
+.contents_B_blank{
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 990px) {
+    .section_blank{
+        margin-bottom: 80px;
+    }
+    .title_blank{
+        margin-bottom: 10px;
+    }
+    .text_blank{
+        margin-bottom: 10px;
+    }
+    .contents_L_blank{
+        margin-left: 10px;
+    }
+    .contents_R_blank{
+        margin-right: 10px;
+    }
+    .contents_B_blank{
+        margin-bottom: 10px;
+    }
+}

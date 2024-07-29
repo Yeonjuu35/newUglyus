@@ -1,0 +1,85 @@
+$uglyred : #FF2F2F;
+$uglyorange : #FE663F;
+$uglybrown : #CD8F50;
+$uglygreen : #5EAB42;
+$uglyblack : #000000;
+$uglygray : #333333;
+$uglylightgray : #CECECE;
+
+// 임시
+body {
+    background-color: bisque;
+    height: 5000px;
+}
+
+header{
+    background-color: transparent;
+    transition: background-color 0.3s ease-out;
+    .naviStyle {
+        height: 80px;
+        
+        .logoimg{
+            max-width: 150px;
+        }
+        .gnb{
+            &:hover{
+                
+                &:before{
+                    border-top: 1px solid #D9D9D9;
+                    height: calc(9rem + 50px);
+                    width: 1920px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                .gnbli{
+                    .gnbul{
+                        height: calc(9rem + 20px);
+                    }
+                }
+            }
+            &:before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 100%;
+                right: 0;
+                height: 0;
+                background-color: white;
+                transition: height 0.3s;
+            }
+            .gnbli{
+
+                .gnbul{
+                    top: 55px;
+                    left: 0;
+                    min-width: 67.14px;
+                    height: 0;
+                    overflow: hidden;
+                    transition: 0.5s;
+                    .ulSubmenu{
+                        width: 170px;
+                        height: 45px;
+                        &:hover{
+                            background-color: $uglyorange;
+                            span{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                .ulStyle1{
+                    left: -51px;
+                }
+                .ulStyle2{
+                    left: -50.915px;
+                }
+            }
+            .gnbStyle {
+                padding-right: 100px;
+            }
+        }
+        .utilStyle {
+            padding-right: 35px;
+        }
+    } 
+}

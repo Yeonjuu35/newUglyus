@@ -10,76 +10,140 @@ $uglylightgray : #CECECE;
 body {
     background-color: bisque;
     height: 5000px;
-}
-
-header{
-    background-color: transparent;
-    transition: background-color 0.3s ease-out;
-    .naviStyle {
-        height: 80px;
-        
-        .logoimg{
-            max-width: 150px;
+    &.hovermode{
+        header{
+            background-color: white !important;
         }
-        .gnb{
-            &:hover{
-                
-                &:before{
-                    border-top: 1px solid #D9D9D9;
-                    height: calc(9rem + 50px);
-                    width: 1920px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                }
-                .gnbli{
-                    .gnbul{
-                        height: calc(9rem + 20px);
+    }
+    header{
+        // transition: 0.3s;
+        .naviStyle {
+            height: 80px;
+            .logoimg{
+                max-width: 150px;
+            }
+            .gnb{
+                &:hover{
+                    &:before{
+                        border-top: 1px solid #D9D9D9;
+                        height: calc(9rem + 50px);
+                        width: 1920px;
+                        left: 50%;
+                        transform: translateX(-50%);
                     }
-                }
-            }
-            &:before{
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 100%;
-                right: 0;
-                height: 0;
-                background-color: white;
-                transition: height 0.3s;
-            }
-            .gnbli{
-
-                .gnbul{
-                    top: 55px;
-                    left: 0;
-                    min-width: 67.14px;
-                    height: 0;
-                    overflow: hidden;
-                    transition: 0.5s;
-                    .ulSubmenu{
-                        width: 170px;
-                        height: 45px;
-                        &:hover{
-                            background-color: $uglyorange;
-                            span{
-                                color: white;
-                            }
+                    .gnbli{
+                        .gnbul{
+                            height: calc(9rem + 20px);
                         }
                     }
                 }
-                .ulStyle1{
-                    left: -51px;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    right: 0;
+                    height: 0;
+                    background-color: white;
+                    transition: height 0.3s;
                 }
-                .ulStyle2{
-                    left: -50.915px;
+                .gnbli{
+                    > a{
+                        padding: 20px 50px 0;
+                        display: block;
+                        overflow: hidden;
+                        position: relative;
+                        line-height: 1;
+                        &:hover{
+                            &:before{
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                height: 100%;
+                                left: 2px;
+                                width: 45px;
+                                display: block;
+                                transition: 0.5s;
+                                background-image: url(../../public/img/header/navivege0.svg);
+                                background-repeat: no-repeat;
+                                background-position: center bottom;
+                                z-index: 1;
+                            }
+                            &::after{
+                                transform: translateY(-100%);
+                            }
+                        }
+                        &:after{
+                            content: "";
+                            display: block;
+                            width: 50px;
+                            height: 100%;
+                            position: absolute;
+                            left: 0;
+                            background-repeat: no-repeat;
+                            background-position: center bottom;
+                            transform: translateY(0);
+                            transition: 0.5s;
+                        }
+                    }
+                    .naviIcon0{
+                        display: block;
+                        &::after{
+                            background-image: url(../../public/img/header/navivege2.svg);
+                            background-size: auto 95%;
+                            margin-top: 5px;
+                        }
+                    }
+                    .naviIcon1{
+                        display: block;
+                        &::after{
+                            background-image: url(../../public/img/header/navivege3.svg);
+                            background-size: auto 100%;
+                        }
+                    }
+                    .naviIcon2{
+                        &::after{
+                            background-image: url(../../public/img/header/navivege4.svg);
+                            background-size: auto 85%;
+                            margin-top: 5px;
+                        }
+                    }
+                    .naviIcon3{
+                        display: block;
+                        &::after{
+                            background-image: url(../../public/img/header/navivege6.svg);
+                            background-size: auto 85%;
+                            margin-top: 2px;
+                        }
+                    }
+                    .gnbul{
+                        top: 60px;
+                        // left: 0;
+                        height: 0;
+                        overflow: hidden;
+                        transition: 0.3s;
+                        .ulSubmenu{
+                            width: 170px;
+                            height: 45px;
+                            &:hover{
+                                background-color: $uglyorange;
+                                span{
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                    .ulStyle1{
+                        left: -1px;
+                    }
+                    .ulStyle2{
+                        left: -0.915px;
+                    }
                 }
             }
-            .gnbStyle {
-                padding-right: 100px;
+            .utilStyle {
+                padding-right: 35px;
             }
-        }
-        .utilStyle {
-            padding-right: 35px;
-        }
-    } 
+        } 
+    }
 }

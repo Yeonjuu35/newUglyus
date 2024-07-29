@@ -12,8 +12,8 @@ function App() {
             {/* <Routes>
                 <Route path='/' element={<Maincontent />}></Route>
             </Routes>             */}
-            {/* <Footer />
-            <Quickmenu /> */}
+            <Footer />
+            <Quickmenu />
         </>
     );
 }

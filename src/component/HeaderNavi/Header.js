@@ -24,6 +24,23 @@ function App() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isHovered || window.scrollY > 0) {
+        document.body.classList.add('hovermode');
+      } else {
+        document.body.classList.remove('hovermode');
+      }
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isHovered]);
+
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
@@ -43,21 +60,20 @@ function App() {
   };
 
   return (
-    <header className={`p-0 position-relative ${isHovered ? 'bg-white' : ''}`}>
-      <div className='container customWidth naviStyle d-flex justify-content-between align-items-center fixed-top w-100 position-relative'>
+    <header className='fixed-top'>
+      <div className='container customWidth naviStyle d-flex justify-content-between align-items-center p-0'>
         <h1 className='m-0'>
           <img className='logoimg' src="./img/header/logo.svg" alt="어글리어스 로고" />
         </h1>
         <ul className='gnb d-flex justify-content-center align-items-center'>
           {Object.values(menuData).map((menu, index) => (
-            <li
-              key={index}
-              className={index < Object.values(menuData).length - 1 ? 'gnbli gnbStyle position-relative' : 'gnbli position-relative'}
+            <li key={index}
+              className='gnbli position-relative'
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
             >
-              <a href={menu.gnblink}>
-                <span className='fontNavi fontMedium'>{menu.gnbnm}</span>
+              <a href={menu.gnblink} className={`naviIcon${index}`}>
+                <span className={'fontNavi fontMedium'}>{menu.gnbnm}</span>
               </a>
               {menu.subMenus.length > 0 && (
                 <ul className={`gnbul position-absolute text-center text-nowrap ${index === Object.values(menuData).length - 1 ? 'ulStyle2' : 'ulStyle1'}`}>

@@ -49,6 +49,7 @@ body {
                 }
                 .gnbli{
                     > a{
+                        margin-bottom: 15px;
                         padding: 20px 50px 0;
                         display: block;
                         overflow: hidden;
@@ -64,10 +65,11 @@ body {
                                 width: 45px;
                                 display: block;
                                 transition: 0.5s;
-                                background-image: url(../../public/img/header/navivege0.svg);
+                                background-image: url(../../public/img/header/ground2.svg);
                                 background-repeat: no-repeat;
                                 background-position: center bottom;
                                 z-index: 1;
+                                margin-top: 1px;
                             }
                             &::after{
                                 transform: translateY(-100%);
@@ -89,35 +91,36 @@ body {
                     .naviIcon0{
                         display: block;
                         &::after{
-                            background-image: url(../../public/img/header/navivege2.svg);
-                            background-size: auto 95%;
-                            margin-top: 5px;
+                            background-image: url(../../public/img/header/carrot.svg);
+                            background-size: auto 100%;
+                            margin-top: 12px;
                         }
                     }
                     .naviIcon1{
                         display: block;
                         &::after{
-                            background-image: url(../../public/img/header/navivege3.svg);
+                            background-image: url(../../public/img/header/onion2.svg);
                             background-size: auto 100%;
+                            margin-top: 7px;
                         }
                     }
                     .naviIcon2{
                         &::after{
-                            background-image: url(../../public/img/header/navivege4.svg);
-                            background-size: auto 85%;
-                            margin-top: 5px;
+                            background-image: url(../../public/img/header/potato.svg);
+                            background-size: auto 77%;
+                            margin-top: 7px;
                         }
                     }
                     .naviIcon3{
                         display: block;
                         &::after{
-                            background-image: url(../../public/img/header/navivege6.svg);
-                            background-size: auto 85%;
-                            margin-top: 2px;
+                            background-image: url(../../public/img/header/sweetpotato2.svg);
+                            background-size: auto 88%;
+                            margin-top: 7px;
                         }
                     }
                     .gnbul{
-                        top: 60px;
+                        top: 67px;
                         // left: 0;
                         height: 0;
                         overflow: hidden;
@@ -134,16 +137,45 @@ body {
                         }
                     }
                     .ulStyle1{
-                        left: -1px;
+                        left: -5px;
                     }
                     .ulStyle2{
-                        left: -0.915px;
+                        left: -3.915px;
                     }
                 }
             }
             .utilStyle {
-                padding-right: 35px;
+                padding-right: 30px;
             }
         } 
     }
 }
+
+// .gnbli:hover > a:before, .gnbli .gnbul:hover > a:before, .gnbli:hover > a:after, .gnbli .gnbul:hover > a:after {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     height: 100%;
+//     left: 2px;
+//     width: 45px;
+//     display: block;
+//     transition: 0.5s;
+//     background-image: url(../../public/img/header/ground2.svg);
+//     background-repeat: no-repeat;
+//     background-position: center bottom;
+//     z-index: 1;
+//     margin-top: 1px;
+// }
+
+// .gnbli:hover > a:after, .gnbli .gnbul:hover > a:after {
+//     content: "";
+//     display: block;
+//     width: 50px;
+//     height: 100%;
+//     position: absolute;
+//     left: 0;
+//     background-repeat: no-repeat;
+//     background-position: center bottom;
+//     transform: translateY(-100%);
+//     transition: 0.5s;
+// }

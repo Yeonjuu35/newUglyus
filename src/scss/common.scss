@@ -7,11 +7,19 @@ $uglyblack : #000000;
 $uglygray : #333333;
 $uglylightgray : #CECECE;
 
-ul, li, dl, dt, dd, a, p{
+ul, li, dl, dt, dd, a, p, h1, h2{
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
+}
+
+// 로고
+.logoWidth{
+    max-width: 130px;
+}
+.logoMargin{
+    margin-bottom: 7px;
 }
 
 // border-radius 공통 스타일 (버튼,이미지)
@@ -19,11 +27,16 @@ ul, li, dl, dt, dd, a, p{
     border-radius: 20px;
 }
 
-// 컨테이너 - width(1824px)
-.container.customWidth {
+// 컨테이너
+.container.customWidth1 {
     max-width: 1824px !important;
     margin: 0 auto !important;
 }
+.container.customWidth2 {
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+}
+
 
 // 폰트
 // 전체 폰트 적용(한글)
@@ -76,7 +89,6 @@ body {
 .fontTitle{
     font-size: 38px;
     color: $uglyorange;
-    line-height: 2.5rem;
     @media (max-width : 990px){
         font-size: 28px;
         line-height: 1.7rem;
@@ -108,29 +120,16 @@ body {
         font-size: 14px;
     }
 }
-.font_f18bold{
-    font-family: 'Pretendard';
+.fontFootertitle{
     font-size: 18px;
     color: $uglygray;
 }
-.font_f14semibold{
-    font-family: 'Pretendard';
+.fontFooterBd{
     font-size: 14px;
     color: $uglygray;
 }
-.font_f13regular_k{
-    font-family: 'Pretendard';
-    font-size: 13px;
-    color: $uglygray;
-}
-.font_f13regular_e{
-    font-family: 'Rubik';
-    font-size: 13px;
-    color: $uglygray;
-}
-.font_f13bold{
-    font-family: 'Pretendard';
-    font-size: 13px;
+.fontFootertext{
+    font-size: 14px;
     color: $uglygray;
 }
  

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../supabaseClient';
+import Logo from './Logo';
 
 function App() {
   const [data, setData] = useState([]);
@@ -26,9 +27,14 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (isHovered || window.scrollY > 0) {
+      if (isHovered) {
         document.body.classList.add('hovermode');
+        document.body.classList.remove('scrollmode');
+      } else if (window.scrollY > 0) {
+        document.body.classList.add('scrollmode');
+        document.body.classList.remove('hovermode');
       } else {
+        document.body.classList.remove('scrollmode');
         document.body.classList.remove('hovermode');
       }
     };
@@ -61,10 +67,8 @@ function App() {
 
   return (
     <header className='fixed-top'>
-      <div className='container customWidth naviStyle d-flex justify-content-between align-items-center p-0'>
-        <h1 className='m-0'>
-          <img className='logoimg' src="./img/header/logo.svg" alt="어글리어스 로고" />
-        </h1>
+      <div className='container customWidth1 naviStyle d-flex justify-content-between align-items-center p-0'>
+        <Logo />
         <ul className='gnb d-flex justify-content-center align-items-center'>
           {Object.values(menuData).map((menu, index) => (
             <li key={index}
@@ -76,7 +80,7 @@ function App() {
                 <span className={'fontNavi fontMedium'}>{menu.gnbnm}</span>
               </a>
               {menu.subMenus.length > 0 && (
-                <ul className={`gnbul position-absolute text-center text-nowrap ${index === Object.values(menuData).length - 1 ? 'ulStyle2' : 'ulStyle1'}`}>
+                <ul className={`gnbul position-absolute text-center text-nowrap ${index < Object.values(menuData).length - 2 ? 'ulStyle1' : index === Object.values(menuData).length - 2 ? '' : 'ulStyle2'}`}>
                   {menu.subMenus.map((subMenu, subIndex) => (
                     <li key={subIndex} className='ulSubmenu d-flex justify-content-center align-items-center'>
                       <a href={subMenu.gnblink}>

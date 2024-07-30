@@ -1,0 +1,18 @@
+// 컬러
+$uglyred : #FF2F2F;
+$uglyorange : #FE663F;
+$uglybrown : #CD8F50;
+$uglygreen : #5EAB42;
+$uglyblack : #000000;
+$uglygray : #333333;
+$uglylightgray : #CECECE;
+
+.footerIcon{
+    width: 42px;
+    height: 42px;
+    background-color: $uglyorange;
+    border-radius: 12px;
+}
+.iconStyle{
+    margin-right: 11px;
+}

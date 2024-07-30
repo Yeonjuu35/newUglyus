@@ -4,17 +4,15 @@ import styled from 'styled-components';
 export const Button = styled.button`
     border-radius: 20px;
     font-weight: 600;
-    background : '$uglyorange'
+    background-color : #FE663F;
     border : none;
-    color : '#fff'
-
-    font-size : ${props => props.small ? '13px' : props.medium ? '15px' : '22px' }
-    width : ${props => props.mini ? '135px' : props.medi ? '260px' : '400px'}
-    height : ${props => props.short ? '40px' : '60px'}
+    color : #fff;
+    font-size : ${props => props.small ? '13px' : props.medium ? '15px' : '22px' };
+    width : ${props => props.mini ? '135px' : props.medi ? '260px' : '400px'};
+    height : ${props => props.short ? '40px' : '60px'};
     @media (max-width: 990px) {
     }
 ` 
-
 
 // 추후 수정
 export const Title = styled.h2`

@@ -8,7 +8,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 // scss
 import '../src/scss/common.scss';
-import '../src/scss/navi.scss'
+import '../src/scss/navi.scss';
+import '../src/scss/footer.scss';
 import '../src/scss/pyj.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

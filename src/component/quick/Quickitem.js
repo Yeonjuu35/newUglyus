@@ -13,7 +13,7 @@ function Quickitem() {
                         <li key={`quick${i}`}>
                             <a href={v.quickhref}>
                                 <img src={v.quickSrc} alt={v.quickAlt} />
-                                <span className='font_button_pyj'>{v.quickText}</span>
+                                <span className='fontQuick fontMedium'>{v.quickText}</span>
                             </a>
                         </li>
                     )

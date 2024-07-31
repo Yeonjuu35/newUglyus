@@ -1,3 +1,4 @@
+// color
 $uglyred : #FF2F2F;
 $uglyorange : #FE663F;
 $uglybrown : #CD8F50;
@@ -6,7 +7,7 @@ $uglyblack : #000000;
 $uglygray : #333333;
 $uglylightgray : #CECECE;
 
-// 임시
+// 커스텀
 body {
     &.scrollmode{
         header{
@@ -33,7 +34,7 @@ body {
     }
     header{
         // transition: 0.3s;
-        .naviStyle {
+        .naviStyle{
             height: 75px;
             .gnb{
                 &:before{
@@ -84,13 +85,13 @@ body {
                             z-index: 1;
                             margin-top: 1px;
                         }
-                        >a::after{
+                        > a:after{
                             transform: translateY(-100%);
                         }
                     }
                     .naviIcon0{
                         display: block;
-                        &::after{
+                        &:after{
                             background-image: url(../../public/img/header/carrot.svg);
                             background-size: auto 100%;
                             margin-top: 10px;
@@ -98,14 +99,14 @@ body {
                     }
                     .naviIcon1{
                         display: block;
-                        &::after{
+                        &:after{
                             background-image: url(../../public/img/header/onion2.svg);
                             background-size: auto 100%;
                             margin-top: 5px;
                         }
                     }
                     .naviIcon2{
-                        &::after{
+                        &:after{
                             background-image: url(../../public/img/header/potato.svg);
                             background-size: auto 77%;
                             margin-top: 5px;
@@ -113,7 +114,7 @@ body {
                     }
                     .naviIcon3{
                         display: block;
-                        &::after{
+                        &:after{
                             background-image: url(../../public/img/header/sweetpotato2.svg);
                             background-size: auto 88%;
                             margin-top: 5px;

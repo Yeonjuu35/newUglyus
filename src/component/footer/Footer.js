@@ -1,13 +1,14 @@
 import React from 'react'
 import { Button } from '../common/style';
-import Logo from '../Header/Logo'
 
 function Footer() {
     return (
         <footer className='d-flex justify-content-between container customWidth2 px-0 py-5'>
             <div>
                 <div className='d-flex flex-column'>
-                    <Logo cls='order-3' />
+                    <h1 className='order-3'>
+                        <img className='logoWidth' src='./img/header/logo.svg' alt="어글리어스 로고" />
+                    </h1>
                     <h2 className='m-0 fontFootertitle fontBold mb-3'>어글리어스 고객센터 070.4769.0271</h2>
                     <div className='d-flex mb-4'>
                         <div className='d-flex flex-column me-5'>

@@ -1,0 +1,90 @@
+// color
+$uglyred : #FF2F2F;
+$uglyorange : #FE663F;
+$uglybrown : #CD8F50;
+$uglygreen : #5EAB42;
+$uglyblack : #000000;
+$uglygray : #333333;
+$uglylightgray : #CECECE;
+
+// 커스텀
+// 폰트
+.fontQuick{
+    font-size: 13px;
+    color: $uglyblack;
+    line-height: 1.5rem;
+      @media (max-width : 990px){
+        font-size: 12px;
+      }
+}
+
+// 퀵버튼 스타일
+.quickIconPlus{
+width: 35px;
+height: auto;
+cursor: pointer;
+}
+
+#quick_pyj{
+position: fixed;
+bottom: calc(10vh - 55px);
+right: 35px;
+width: 70px;
+&.showmenu{
+        .radishQuick{
+            ul{
+                height: 334px;
+            }
+            > a{
+                filter: invert(38%) sepia(52%) saturate(535%) hue-rotate(56deg) brightness(95%) contrast(90%);
+            }
+        }
+    }
+    .radishQuick{
+        &:before{ 
+            content: "";
+            display: block;
+            padding-top: 62px;
+            background: url('../../public/img/img_pyj/quick/radish_head.svg') center no-repeat;
+            background-size: 100% auto;
+        }
+        ul{
+            background-color: #F1EBE5;
+            height: 0;
+            transition: 0.5s;
+            overflow: hidden;
+            li{
+                background: url('../../public/img/img_pyj/quick/radish_bodyline.svg') right bottom no-repeat;
+                background-size: 100% auto;
+                text-align: center;
+                padding: 10px 0;
+                img{
+                    width:calc(100% - 35px);
+                    display: block;
+                    margin: 0 auto;
+                }
+                a{
+                    text-decoration: none;
+                    &:hover{
+                    filter: invert(38%) sepia(52%) saturate(535%) hue-rotate(56deg) brightness(95%) contrast(90%);
+                    }
+                }
+            }
+        }
+        > a{
+            display: block;
+            height: 0;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        &:after{
+            content: "";
+            display: block;
+            padding-top: 55px;
+            background: url('../../public/img/img_pyj/quick/radish_bottomline.svg') 0px center no-repeat #F1EBE5;
+            background-size: 100% auto;
+            border-radius: 0 0 35px 35px;
+            background-position: 2px center;;
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import Quickitem from './Quickitem';
 import React, {useEffect} from "react";
+import '../../scss/quick.scss'
 
 
 const QuickMenu = () => {
@@ -23,7 +24,7 @@ const QuickMenu = () => {
                 <Quickitem></Quickitem>             
             </ul>
             <a href="#none" className='quickplusicon'>
-                <img src="/img/img_pyj/quick/plus.svg" alt="플러스" className='quickIcon' />
+                <img src="/img/img_pyj/quick/plus.svg" alt="더보기" className='quickIconPlus' />
             </a>
         </div>
       </aside>

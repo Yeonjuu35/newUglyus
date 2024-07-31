@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../supabaseClient';
-import Logo from './Logo';
+import '../../scss/header.scss'
 
 function App() {
   const [data, setData] = useState([]);
@@ -68,7 +68,9 @@ function App() {
   return (
     <header className='fixed-top'>
       <div className='container customWidth1 naviStyle d-flex justify-content-between align-items-center p-0'>
-        <Logo />
+        <h1>
+          <img className='logoWidth logoMargin' src='./img/header/logo.svg' alt="어글리어스 로고" />
+        </h1>
         <ul className='gnb d-flex justify-content-center align-items-center'>
           {Object.values(menuData).map((menu, index) => (
             <li key={index}

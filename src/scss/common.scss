@@ -120,6 +120,14 @@ body {
         font-size: 14px;
     }
 }
+.fontQuick{
+    font-size: 13px;
+    color: $uglyblack;
+    line-height: 1.5rem;
+      @media (max-width : 990px){
+        font-size: 12px;
+      }
+}
 .fontFootertitle{
     font-size: 18px;
     color: $uglygray;

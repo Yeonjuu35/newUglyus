@@ -17,9 +17,16 @@ ul, li, dl, dt, dd, a, p, h1, h2{
 // 로고
 .logoWidth{
     max-width: 130px;
+    @media (max-width : 990px) {
+        max-width: 80px;
+        margin-left: 10px;
+    }
 }
 .logoMargin{
     margin-bottom: 7px;
+    @media (max-width : 990px) {
+        margin-bottom: 5px;
+    }
 }
 
 // border-radius 공통 스타일 (버튼,이미지)
@@ -76,14 +83,14 @@ body {
     font-size: 16px;
     color: $uglygray;
     @media (max-width : 990px){
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 .fontUtil{
     font-size: 13px;
     color: $uglyblack;
     @media (max-width : 990px){
-        font-size: 12px;
+        font-size: 8px;
     }
 }
 .fontTitle{

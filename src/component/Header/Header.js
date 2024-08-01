@@ -71,17 +71,14 @@ function App() {
         <h1>
           <img className='logoWidth logoMargin' src='./img/header/logo.svg' alt="어글리어스 로고" />
         </h1>
-        <ul className='gnb d-flex justify-content-center align-items-center'>
+        <ul className='gnb d-flex justify-content-lg-center align-items-lg-center'>
           {Object.values(menuData).map((menu, index) => (
-            <li key={index}
-              className='gnbli position-relative'
-              onMouseOver={handleMouseOver}
-              onMouseOut={handleMouseOut}
-            >
-              <a href={menu.gnblink} className={`naviIcon${index}`}>
+            <li key={index} className='gnbli position-relative active' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+              <a href={menu.gnblink} className={`naviIcon${index} d-lg-block d-flex justify-content-between align-items-center`}>
                 <span className={'fontNavi fontMedium'}>{menu.gnbnm}</span>
+                <span className='d-lg-none d-block arrowIcon'><img src="./img/header/arrow.svg" alt="더보기" /></span>
               </a>
-              {menu.subMenus.length > 0 && (
+              {/* {menu.subMenus.length > 0 && (
                 <ul className={`gnbul position-absolute text-center text-nowrap ${index < Object.values(menuData).length - 2 ? 'ulStyle1' : index === Object.values(menuData).length - 2 ? '' : 'ulStyle2'}`}>
                   {menu.subMenus.map((subMenu, subIndex) => (
                     <li key={subIndex} className='ulSubmenu d-flex justify-content-center align-items-center'>
@@ -91,9 +88,12 @@ function App() {
                     </li>
                   ))}
                 </ul>
-              )}
+              )} */}
             </li>
           ))}
+          <li>
+            <button className='menuBtn d-lg-none p-0'><i className='btnIcon'></i></button>
+          </li>
         </ul>
         <ul className="d-flex justify-content-center align-items-center">
           <li className='utilStyle'><a href="#"><span className="fontUtil fontRegular">로그인</span></a></li>

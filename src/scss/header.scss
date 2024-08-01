@@ -9,6 +9,8 @@ $uglylightgray : #CECECE;
 
 // 커스텀
 body {
+    background: bisque !important;
+    height: 5000px;
     &.scrollmode{
         header{
             background-color: white !important;
@@ -33,7 +35,6 @@ body {
         }
     }
     header{
-        // transition: 0.3s;
         .naviStyle{
             height: 75px;
             .gnb{
@@ -149,5 +150,175 @@ body {
                 padding-right: 30px;
             }
         } 
+    }
+}
+
+@media (max-width : 990px) {
+    body {
+        &.scrollmode{
+            header{
+                background-color: white !important;
+            }
+        }
+        &.hovermode{
+            header{
+                background-color: white !important;
+                .gnb{
+                    &:before{
+                    border-top: 1px solid #F5F5F5;
+                    height: calc(9rem + 15px) !important;
+                    right: 0 !important;
+                    left: 0 !important;
+                    }
+                    .gnbli{
+                        .gnbul{
+                            height: calc(9rem + 5px) !important;
+                        }
+                    }
+                }
+            }
+        }
+        header{
+            background-color: white !important;
+            .naviStyle{
+                height: 40px;
+                .gnb{
+                    position: fixed;
+                    top: 40px;
+                    right: 0;
+                    width: 200px;
+                    height: calc(100vh - 60px);
+                    background-color: white;
+                    border-top : 1px solid #F5F5F5;
+                    border-bottom : 1px solid #F5F5F5;
+                    flex-direction: column;
+                    .gnbli{
+                        border: 1px solid #F5F5F5;
+                        max-width: 200px;
+                        height: 43px;
+                        > a {
+                            padding: 13px 35px;
+                            // margin-bottom: 17px;
+                            // padding: 20px 50px 0;
+                            // display: block;
+                            // overflow: hidden;
+                            // position: relative;
+                            // line-height: 1;
+                            
+                            &:after{
+                                content: "";
+                                display: block;
+                                width: 50px;
+                                height: 100%;
+                                position: absolute;
+                                left: 0;
+                                background-repeat: no-repeat;
+                                background-position: center bottom;
+                                transform: translateY(0);
+                                transition: 0.5s;
+                            }
+                            .arrowIcon{
+                                width: 7px;
+                                height: auto;
+                            }
+                        }
+                        // &:hover,
+                        &.active{
+                           > a:before{
+                                content: "";
+                                position: absolute;
+                                top: -17px;
+                                height: 100%;
+                                left: 10px;
+                                width: 20px;
+                                display: block;
+                                transition: 0.5s;
+                                background-image: url(../../public/img/header/ground4.svg);
+                                background-repeat: no-repeat;
+                                background-position: center bottom;
+                                z-index: 1;
+                                margin-top: 1px;
+                            }
+                            > a:after{
+                                transform: translateY(-100%);
+                            }
+                        }
+                        .naviIcon0{
+                            &:after{
+                                background-image: url(../../public/img/header/carrot.svg);
+                                background-size: auto 100%;
+                                margin-top: 10px;
+                            }
+                        }
+                        .naviIcon1{
+                            &:after{
+                                background-image: url(../../public/img/header/onion2.svg);
+                                background-size: auto 100%;
+                                margin-top: 5px;
+                            }
+                        }
+                        .naviIcon2{
+                            &:after{
+                                background-image: url(../../public/img/header/potato.svg);
+                                background-size: auto 77%;
+                                margin-top: 5px;
+                            }
+                        }
+                        .naviIcon3{
+                            &:after{
+                                background-image: url(../../public/img/header/sweetpotato2.svg);
+                                background-size: auto 88%;
+                                margin-top: 5px;
+                            }
+                        }
+                        .gnbul{
+                            top: 65px;
+                            // left: 0;
+                            height: 0;
+                            overflow: hidden;
+                            transition: 0.3s;
+                            .ulSubmenu{
+                                width: 161px;
+                                height: 45px;
+                                // &:hover{
+                                //     span{
+                                //         color: $uglyorange;
+                                //         font-weight: 600 !important;
+                                //     }
+                                // }
+                            }
+                        }
+                        .ulStyle1{
+                            left: -1px;
+                        }
+                        .ulStyle2{
+                            left: 1.085px;
+                        }
+                    }
+                    .menuBtn{
+                        display: block;
+                        position: absolute;
+                        top: -40px;
+                        right: 10px;
+                        width: 40px;
+                        height: 40px;
+                        border: none;
+                        background-color: transparent;
+                        .btnIcon{
+                            display: block;
+                            width: 22px;
+                            height: 22px;
+                            margin: 0 auto;
+                            background: url(../../public/img/header/menu2.svg) no-repeat center;
+                            background-size: contain;
+                            content: "";
+                        }
+                    }
+                }
+                .utilStyle {
+                    padding-right: 30px;
+                }
+            } 
+        }
     }
 }

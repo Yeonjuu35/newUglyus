@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './component/Header/Header';
 import Footer from './component/footer/Footer';
 import Quickmenu from './component/quick/Quickmenu';
-// import Maincontent from './component/Maincontent';
+import Maincontent from './component/Maincontent';
 
 function App() {
     return (
@@ -13,7 +13,7 @@ function App() {
                 <Route path='/' element={<Maincontent />}></Route>
             </Routes>             */}
             {/* <Footer /> */}
-            <Quickmenu />
+            {/* <Quickmenu /> */}
         </>
     );
 }

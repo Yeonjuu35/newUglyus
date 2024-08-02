@@ -73,7 +73,7 @@ function App() {
         </h1>
         <ul className='gnb d-flex justify-content-lg-center align-items-lg-center'>
           {Object.values(menuData).map((menu, index) => (
-            <li key={index} className='gnbli position-relative active' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+            <li key={index} className='gnbli position-relative' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
               <a href={menu.gnblink} className={`naviIcon${index} d-lg-block d-flex justify-content-between align-items-center`}>
                 <span className={'fontNavi fontMedium'}>{menu.gnbnm}</span>
                 <span className='d-lg-none d-block arrowIcon'><img src="./img/header/arrow.svg" alt="더보기" /></span>
